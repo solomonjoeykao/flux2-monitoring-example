@@ -38,5 +38,8 @@ spec:
           matchLabels:
             app.kubernetes.io/component: monitoring
     grafana:
+      service:
+        type: NodePort
+        nodePort: 31024
       defaultDashboardsEnabled: false
       adminPassword: flux
